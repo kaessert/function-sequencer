@@ -2,6 +2,8 @@ module github.com/crossplane/function-sequencer
 
 go 1.24.6
 
+toolchain go1.26.10
+
 require (
 	github.com/alecthomas/kong v1.12.1
 	github.com/crossplane/crossplane-runtime v1.14.4
