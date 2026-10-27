@@ -14,9 +14,9 @@ on:
 
 env:
   # Common versions
-  GO_VERSION: '1.21.3'
-  GOLANGCI_VERSION: 'v1.54.2'
-  DOCKER_BUILDX_VERSION: 'v0.11.2'
+  GO_VERSION: '1.26.10'
+  GOLANGCI_VERSION: 'v2.11.4'
+  DOCKER_BUILDX_VERSION: 'v0.24.0'
 
   # These environment variables are important to the Crossplane CLI install.sh
   # script. They determine what version it installs.
@@ -49,7 +49,7 @@ jobs:
           cache: false  # The golangci-lint action does its own caching.
 
       - name: Lint
-        uses: golangci/golangci-lint-action@v3
+        uses: golangci/golangci-lint-action@v9
         with:
           version: ${{ env.GOLANGCI_VERSION }}
 
